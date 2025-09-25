@@ -1,17 +1,11 @@
-What services does AI10X offer?
-AI10X specializes in advanced AI performance benchmarking. They analyze and optimize AI Operations (AIOps) to make them faster and more efficient. 🏎️
+What services does AI10X offer: AI10X specializes in advanced AI performance benchmarking. They analyze and optimize AI Operations (AIOps) to make them faster and more efficient. 🏎️
 
-What is the primary benefit of using this service?
-The main benefit is gaining a significant competitive advantage. By drastically increasing processing speed and reducing latency, your AI systems will outperform competitors.
+What is the primary benefit of using this service: The main benefit is gaining a significant competitive advantage. By drastically increasing processing speed and reducing latency, your AI systems will outperform competitors.
 
-Who is this service for?
-This service is designed for a wide range of users, from non-technical executives who want a business advantage to technical engineers (like AIOps/MLOps teams and CTOs) who need to resolve performance bottlenecks.
+Who is this service for: This service is designed for a wide range of users, from non-technical executives who want a business advantage to technical engineers (like AIOps/MLOps teams and CTOs) who need to resolve performance bottlenecks.
 
-How can I get started with the product?
-You can get started by emailing admin@ai10x.dev. They will provide more information about the product and help you obtain a trial license. 🔑
+How can I get started with the product: You can get started by emailing admin@ai10x.dev. They will provide more information about the product and help you obtain a trial license. 🔑
 
-In simple terms, what does AI10X do?
-Think of them as high-performance mechanics for an AI engine. They fine-tune your AI to make it run incredibly fast and efficiently, giving you a major speed advantage.
+In simple terms, what does AI10X do: Think of them as high-performance mechanics for an AI engine. They fine-tune your AI to make it run incredibly fast and efficiently, giving you a major speed advantage.
 
-What specific technical metrics does the company focus on?
-The company focuses on key quantitative metrics such as inference latency, model throughput, and resource utilization (like CPU and GPU cycles) to identify and eliminate performance bottlenecks.
+What specific technical metrics does the company focus on: The company focuses on key quantitative metrics such as inference latency, model throughput, and resource utilization (like CPU and GPU cycles) to identify and eliminate performance bottlenecks.
