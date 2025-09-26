@@ -10,7 +10,7 @@ class Trainer:
         self.dtype = torch.bfloat16
         self.dataset = Data
 
-    def format_text_generation(self, example):
+    def format_text_generation(self, example): #prepare for fintuning by serialising dataset
         question = example['question'] if example['question'] is not None else ""
         context = example['context'] if example['context'] is not None else ""
         answers = example['answers'] if example['answers'] is not None else {"text": [""]}
@@ -18,20 +18,20 @@ class Trainer:
         example['text'] = f"Question: {question}\nContext: {context}\nAnswer: {answer_text}"
         return example
 
-    def map_dataset(self):
+    def map_dataset(self): #map dataset by tokenization of dataset
         dataset = self.dataset.map(self.format_text_generation)
         dataset = dataset.remove_columns(['id', 'title', 'context', 'question', 'answers'])
         dataset = dataset.filter(lambda example: example['text'].strip() != "")
         return dataset
 
-    def load_model(self, model_name, dtype, bnb_config):
+    def load_model(self, model_name, dtype, bnb_config): #load open params 
         model = AutoModelForCausalLM.from_pretrained(
             model_name, quantization_config=bnb_config, torch_dtype=dtype # Use torch_dtype instead of dtype
         )
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         return {"model": model, "tokenizer": tokenizer}
 
-    def hyper_config(self):
+    def hyper_config(self): #hyper param finetuning 
         model_name = self.model_name
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
@@ -73,7 +73,7 @@ class Trainer:
 
         return({"model": model, "tokenizer": tokenizer, "training_args": training_args, "lora_config": lora_config})
 
-    def main_train(self):
+    def main_train(self): #main function for training
         config = self.hyper_config()
         dataset = self.map_dataset()
 
@@ -90,7 +90,6 @@ class Trainer:
             train_dataset=dataset,
             args=training_args,
             peft_config=lora_config, # Pass lora_config to SFTTrainer
-            max_seq_length=512 # Ensure max_seq_length is set
         )
 
         trainer.train()
