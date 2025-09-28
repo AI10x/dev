@@ -93,7 +93,8 @@ class Trainer:
         )
 
         trainer.train()
-
+"""
 dataset = load_dataset("squad", split="train")
 train = Trainer("distilgpt2", dataset)
 train.main_train()
+"""
