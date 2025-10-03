@@ -6,7 +6,7 @@ import time
 def on_key_event(event: keyboard.KeyboardEvent):
     """
     This function is called for any keyboard event (press or release).
-    If the 'enter' key is pressed, it simulates a 'ctrl+s' key press.
+    If the 'enter' key is pressed, it simulates a 'ctrl+s' key press. Use case - saving page as you navigate the browser
     """
 
 
